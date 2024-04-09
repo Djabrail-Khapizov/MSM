@@ -78,11 +78,12 @@ function remplirPlateau() {
     const fixation = document.getElementById('fixationPlatInput').value;
     const finition = document.getElementById('finitionPlatInput').value;
     
-    const etageres = document.getElementById('etageresInput').value;
-    const tringles = document.getElementById('tringlesInput').value; // Nombre de tringles
-    const tiroirs = document.getElementById('tiroirsInput').value; // Nombre de tiroirs
-    const tablettes = document.getElementById('tablettesInput').value; // Nombre de tablettes
+    const etageres = document.getElementById('etageresPlatInput').value;
+    const tringles = document.getElementById('tringlesPlatInput').value; // Nombre de tringles
+    const tiroirs = document.getElementById('tiroirsPlatInput').value; // Nombre de tiroirs
+    const tablettes = document.getElementById('tablettesPlatInput').value; // Nombre de tablettes
 
+    if (boisEn && longueur && profondeur &&  epaisseur && retour &&  fixation &&  finition) {
     infoPlateau.innerHTML = `
     Fourniture et pose d'un plateau en bois <strong>${boisEn}</strong>.
         Longueur : <strong>${longueur}</strong> mm, profondeur : <strong>${profondeur}</strong> mm, épaisseur <strong>${epaisseur}</strong>: mm, retour : <strong>${retour}</strong> mm. <br>
@@ -98,4 +99,8 @@ function remplirPlateau() {
         Fixation <strong>${fixation}</strong> sur tasseaux noyés.<br>
         Finition du plateau <strong>${finition}</strong> vernis / laqué.<br>
     `
+    }
+    else{
+        alert("Veuillez remplir tous les champs du formulaire.");
+    }
 }

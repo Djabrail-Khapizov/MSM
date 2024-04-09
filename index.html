@@ -119,6 +119,7 @@
         <button type="button" onclick="remplirHabillage()">Remplir le texte d'habillage</button>
     </form>
 
+
     <div id="infoHabillage" class="info-container">
         <!-- Placeholder pour le texte d'habillage de mur -->
         Habillage d'un pan de mur en bois .... <span id="boisEnInput"></span>.<br>
@@ -146,9 +147,6 @@
         <label for="retourPlatInput">Retour (mm) :</label>
         <input type="number" id="retourPlatInput" name="retourPlatInput"><br><br>
     
-        <h2>Aménagements</h2>
-
-        
         <label for="fixationPlatInput">Fixations tasseaux noyés :</label>
         <select id="fixationPlatInput" name="fixationPlatInput">
             <option value="visible">Oui</option>
@@ -159,6 +157,22 @@
         <select id="finitionPlatInput" name="finitionPlatInput">
             <option value="vernis">Vernis</option>
             <option value="laque">Laque</option>
+        </select><br>
+
+        <h2>Aménagements</h2>
+
+        <label for="etageresPlatInput">Nombre d'étagères :</label>
+        <input type="etageresPlatInput" id="etageresPlatInput" name="etageresPlatInput"><br><br>
+    
+        <label for="tringlesPlatInput">Nombre de tringles :</label>
+        <input type="number" id="tringlesPlatInput" name="tringlesPlatInput"><br><br>
+    
+        <label for="tiroirsPlatInput">Nombre de tiroirs :</label>
+        <input type="number" id="tiroirsPlatInput" name="tiroirsPlatInput"><br><br>
+    
+        <label for="tablettesPlatInput">Nombre de tablettes :</label>
+        <input type="number" id="tablettesPlatInput" name="tablettesPlatInput"><br><br>
+        
         </select><br>
     
         <button type="button" onclick="remplirPlateau()">Remplir le texte du plateau</button>
