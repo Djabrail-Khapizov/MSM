@@ -1,0 +1,17 @@
+Etape 1 :
+
+Quantit" de matériaux, 
+
+algo qui permet en fonctions de certains éléments d'avoir un texte à trou qui se remplira
+
+chaque chiffrage = combien de matérieux 
+
+Saisi d'info dans le excel et affichage dans le texte après avoir remplis le tout
+
+Etape 2 :
+
+Estimation de superficie et quantité + coûts 
+
+Etape 3 : 
+
+Esthétique 
