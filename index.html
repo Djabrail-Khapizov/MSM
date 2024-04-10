@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
-
+    
+    <div class="div-btn">
+        <button id="btnMeuble" type="button"><b>Formulaire Meuble</b></button>
+        <button id="btnHabillage" type="button"><b>Formulaire Habillage</b></button>
+        <button id="btnPlateau" type="button"><b>Formulaire Plateau</b></button>
+    </div>   
+    
     <form id="formMeuble" class="form-container">
         <h2>Placard</h2>
-        <label for="typeInput">Type de meuble :</label>
+        <label for="typeInput">Type de bois :</label>
         <input type="text" id="typeInput" name="typeInput"><br><br>
     
         <label for="hauteurInput">Hauteur (mm) :</label>
@@ -94,7 +100,7 @@
             - <span id="tiroirs"></span>.... tiroirs posés sur coulisses télescopiques Blum à ouverture tandem. Fermeture avec ralentissement.<br>
             - <span id="tablette"></span>.... tablettes posées sur coulisses télescopiques Blum à ouverture totale.<br>
             Accès par :
-            .... <span id="nbPortes"></span> .... <span id="typePorteInput"></span> .... <span id="boisPorteInput"></span> .... <span id="boisPorte"></span>.<br>
+            .... <span id="nbPortes"></span> portes .... <span id="typePorteInput"></span> en .... <span id="boisPorteInput"></span> .... <span id="boisPorte"></span>.<br>
             Ouverture avec .... <span id="ouverture"></span>.<br>
             Charnières à ouverture 110° pour portes en .... <span id="charniereInput"></span>, fermeture à amortisseur.
             <br>
@@ -161,8 +167,8 @@
 
         <h2>Aménagements</h2>
 
-        <label for="etageresPlatInput">Nombre d'étagères :</label>
-        <input type="etageresPlatInput" id="etageresPlatInput" name="etageresPlatInput"><br><br>
+        <label for="etageresPlatInput">Nombre de tringles :</label>
+        <input type="number" id="etageresPlatInput" name="etageresPlatInput"><br><br>
     
         <label for="tringlesPlatInput">Nombre de tringles :</label>
         <input type="number" id="tringlesPlatInput" name="tringlesPlatInput"><br><br>

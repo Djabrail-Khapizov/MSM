@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     padding: 20px;
-    display: flex;
     justify-content: space-around; /* Alignement des conteneurs */
 }
 
@@ -17,6 +16,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    display: none;
+    
 }
 
 form {
@@ -56,4 +57,29 @@ form button:hover {
 .info-container strong {
     font-weight: bold;
     color: #007bff; /* couleur bleue pour les valeurs */
+}
+
+/* Style pour la classe div-btn contenant les boutons */
+.div-btn {
+    display: flex; /* Utilisation de flexbox pour aligner les boutons horizontalement */
+    justify-content: center; /* Centrer les boutons horizontalement */
+    margin-bottom: 20px; /* Marge en bas pour l'espace visuel */
+}
+
+/* Style pour les boutons à l'intérieur de la classe div-btn */
+.div-btn button {
+    background-color: rgb(47, 33, 243); /* Couleur de fond beige */
+    color: #ffffff; /* Couleur du texte (noir ou autre couleur sombre) */
+    padding: 10px 20px; /* Rembourrage intérieur pour un espace autour du texte */
+    border: none; /* Supprimer la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    margin: 0 10px; /* Marge autour des boutons */
+    cursor: pointer; /* Curseur de souris pointer */
+    font-size: 16px; /* Taille de police */
+    transition: background-color 0.3s ease; /* Animation de transition pour le changement de couleur de fond */
+}
+
+/* Style pour les boutons au survol */
+.div-btn button:hover {
+    background-color: #d2b48c; /* Couleur de fond beige légèrement plus claire au survol */
 }

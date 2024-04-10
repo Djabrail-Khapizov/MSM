@@ -18,7 +18,7 @@ function remplirTexte() {
 
     const infoMeuble = document.getElementById('infoMeuble');
 
-    // Vérifiez si tous les champs requis sont remplis
+    // Vérifiez si tous les champs requis sont remplis AJOUTER PORTE OU PORTES SELON CHIFFRE
     if (type && hauteur && largeur && profondeur && nombreElements && finitionExt && chants && nbPortes && typePorte && boisPorte && ouverture) {
         infoMeuble.innerHTML = `Fourniture et pose d'un meuble en bois intérieur <strong>${type}</strong>. Hauteur : <strong>${hauteur}</strong>mm, largeur : <strong>${largeur}</strong>mm, profondeur : <strong>${profondeur}</strong>mm.
             <br>
@@ -38,7 +38,7 @@ function remplirTexte() {
             - <strong>${tablettes}</strong> tablettes posées sur coulisses télescopiques Blum à ouverture totale.
             <br>
             Accès par :
-            <strong>${nbPortes}</strong> <strong>${typePorte}</strong> <strong>${boisPorte}</strong>. Ouverture avec <strong>${ouverture}</strong>. 
+            <strong>${nbPortes}</strong> portes <strong>${typePorte}</strong> en <strong>${boisPorte}</strong>. Ouverture avec <strong>${ouverture}</strong>. 
             <br>
             Charnières à ouverture 110° pour portes en <strong>${charniere}</strong>, fermeture à amortisseur.`;
             
@@ -104,3 +104,82 @@ function remplirPlateau() {
         alert("Veuillez remplir tous les champs du formulaire.");
     }
 }
+
+
+// Récupérer les éléments des formulaires
+const formMeuble = document.getElementById('formMeuble');
+const formHabillage = document.getElementById('formHabillage');
+const formPlateau = document.getElementById('formPlateau');
+
+// Fonctions pour afficher les formulaires
+function afficherFormMeuble() {
+    formMeuble.style.display = 'block';
+    formHabillage.style.display = 'none';
+    formPlateau.style.display = 'none';
+}
+
+function afficherFormHabillage() {
+    formMeuble.style.display = 'none';
+    formHabillage.style.display = 'block';
+    formPlateau.style.display = 'none';
+}
+
+function afficherFormPlateau() {
+    formMeuble.style.display = 'none';
+    formHabillage.style.display = 'none';
+    formPlateau.style.display = 'block';
+}
+
+// Associer les fonctions aux boutons correspondants
+document.getElementById('btnMeuble').addEventListener('click', afficherFormMeuble);
+document.getElementById('btnHabillage').addEventListener('click', afficherFormHabillage);
+document.getElementById('btnPlateau').addEventListener('click', afficherFormPlateau);
+
+// Par défaut, afficher le formulaire "Meuble" au chargement de la page
+afficherFormMeuble();
+
+
+// Récupérer les éléments des divs d'informations
+const infoMeuble = document.getElementById('infoMeuble');
+const infoHabillage = document.getElementById('infoHabillage');
+const infoPlateau = document.getElementById('infoPlateau');
+
+// Fonctions pour afficher les informations
+function afficherInfoMeuble() {
+    infoMeuble.style.display = 'block';
+    infoHabillage.style.display = 'none';
+    infoPlateau.style.display = 'none';
+}
+
+function afficherInfoHabillage() {
+    infoMeuble.style.display = 'none';
+    infoHabillage.style.display = 'block';
+    infoPlateau.style.display = 'none';
+}
+
+function afficherInfoPlateau() {
+    infoMeuble.style.display = 'none';
+    infoHabillage.style.display = 'none';
+    infoPlateau.style.display = 'block';
+}
+
+// Associer les fonctions aux boutons correspondants
+document.getElementById('btnMeuble').addEventListener('click', () => {
+    afficherFormMeuble();
+    afficherInfoMeuble(); // Afficher les informations correspondantes
+});
+
+document.getElementById('btnHabillage').addEventListener('click', () => {
+    afficherFormHabillage();
+    afficherInfoHabillage(); // Afficher les informations correspondantes
+});
+
+document.getElementById('btnPlateau').addEventListener('click', () => {
+    afficherFormPlateau();
+    afficherInfoPlateau(); // Afficher les informations correspondantes
+});
+
+// Par défaut, afficher le formulaire "Meuble" et ses informations au chargement de la page
+afficherFormMeuble();
+afficherInfoMeuble();
+
