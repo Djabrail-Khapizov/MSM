@@ -19,12 +19,16 @@ function remplirTexte() {
     const infoPlacard = document.getElementById('infoPlacard');
 
     // Vérifiez si tous les champs requis sont remplis AJOUTER PORTE OU PORTES SELON CHIFFRE
-    if (type && hauteur && largeur && profondeur && nombreElements && finitionExt && chants && typePorte && boisPorte && ouverture) {
+    if (type && hauteur && largeur && profondeur && finitionExt && chants && typePorte && boisPorte && ouverture) {
         let infoText = `Fourniture et pose d'un meuble en bois intérieur <strong>${type}</strong>. Hauteur : <strong>${hauteur}</strong>mm, largeur : <strong>${largeur}</strong>mm, profondeur : <strong>${profondeur}</strong>mm.
-        <br>
-        Meuble divisé en <strong>${nombreElements}</strong> éléments.
-        <br>
-        Finition extérieure (joues et façades si existantes) en <strong>${finitionExt}</strong>. Bois mélaminé épaisseur 19mm avec chants <strong>${chants}</strong>.
+        <br>`;
+
+        if (nombreElements > 0) {
+            infoText += ` Meuble divisé en <strong>${nombreElements}</strong> éléments.
+            <br>`;
+        }
+
+        infoText += `Finition extérieure (joues et façades si existantes) en <strong>${finitionExt}</strong>. Bois mélaminé épaisseur 19mm avec chants <strong>${chants}</strong>.
         <br>
         Aménagement du meuble par :
         <br>`;
@@ -67,14 +71,19 @@ function remplirHabillage() {
     const largeur = document.getElementById('largeurHabillageInput').value;
     //const infoHabillage = document.getElementById('infoHabillage');
     
-    if (boisEn && aboutements && hauteur && largeur /*& infoHabillage*/){
-    infoHabillage.innerHTML = `Habillage d'un pan de mur en bois <strong>${boisEn}</strong>.
-        <br>
-        <strong>${aboutements}</strong> aboutements, fil discret. Accroché sur profil de suspension biseauté.
-        <br>
-        Hauteur : <strong>${hauteur}</strong>mm, largeur : <strong>${largeur}</strong>mm - Forfait au mètre carré (surface déterminée à l'aide du plan fourni pour le chiffrage).
+    if (boisEn && hauteur && largeur /*& infoHabillage*/){
+    let infoText = `Habillage d'un pan de mur en bois <strong>${boisEn}</strong>.
+        <br>`;
+
+        if (etageres > 0) {
+            infoText += `<strong>${aboutements}</strong> aboutements, fil discret. Accroché sur profil de suspension biseauté.<br>`;
+        }
+
+        infoText += ` Hauteur : <strong>${hauteur}</strong>mm, largeur : <strong>${largeur}</strong>mm <br> Forfait au mètre carré (surface déterminée à l'aide du plan fourni pour le chiffrage).
         <br>
         Finition de l'habillage vernis.`;
+
+    infoHabillage.innerHTML = infoText;
     }
     else {
         alert("Veuillez remplir tous les champs du formulaire.");
@@ -100,7 +109,7 @@ function remplirPlateau() {
     Fourniture et pose d'un plateau en bois <strong>${boisEn}</strong>.
         Longueur : <strong>${longueur}</strong> mm, profondeur : <strong>${profondeur}</strong> mm, épaisseur <strong>${epaisseur}</strong>: mm, retour : <strong>${retour}</strong> mm. <br>
         Aménagement par :<br>
-        - Meuble en partie basse en bois <strong>${boisEn}</strong> dimensions Hauteur : <strong>${etageres}</strong> mm, largeur : <strong>${etageres}</strong> mm, profondeur : <strong>${etageres}</strong> mm.<br>`
+        - Meuble en partie basse en bois <strong>${boisEn}</strong> dimensions hauteur : <strong>${etageres}</strong> mm, largeur : <strong>${etageres}</strong> mm, profondeur : <strong>${etageres}</strong> mm.<br>`
         if (etageres > 0) {
             infoText += `- <strong>${etageres}</strong> étagères réglables posées sur taquets chromés.<br>`;
         }
@@ -117,18 +126,26 @@ function remplirPlateau() {
             infoText += `- <strong>${tablettes}</strong> tablettes posées sur coulisses télescopiques Blum à ouverture totale.<br>`;
         }
     
-        infoText += `Finition extérieure (joues et façades si existantes) en <strong>${finition}</strong>. Bois mélaminé épaisseur 19mm avec chants stratifiés plaqué en <strong>${etageres}</strong>.<br>
+        console.log(finition);
+        if (finition !== 'aucune') {
+            infoText += `- Finition extérieure (joues et façades si existantes) en <strong>${finition}</strong>.<br>`;
+        }
+
+        infoText += `Bois mélaminé épaisseur 19mm avec chants stratifiés plaqué en <strong>${etageres}</strong>.<br>
         
-        Fixation <strong>${fixation}</strong> sur tasseaux noyés.<br>
-        Finition du plateau <strong>${finition}</strong> vernis / laqué.<br>
-    `
+        Fixation <strong>${fixation}</strong> sur tasseaux noyés.<br>`;
+
+        console.log(finition);
+        if (finition !== 'aucune') {
+            infoText += `- Finition du plateau <strong>${finition}</strong>.<br><br>`;
+        }
+
     infoPlateau.innerHTML = infoText;
 
     }
     else{
         alert("Veuillez remplir tous les champs du formulaire.");
     }
-    console.log(boisEn, longueur, profondeur, epaisseur, retour);
 
 }
 
