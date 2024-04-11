@@ -9,92 +9,88 @@
 <body>
     
     <div class="div-btn">
-        <button id="btnMeuble" type="button"><b>Formulaire Meuble</b></button>
+        <button id="btnPlacard" type="button"><b>Formulaire Placard</b></button>
         <button id="btnHabillage" type="button"><b>Formulaire Habillage</b></button>
         <button id="btnPlateau" type="button"><b>Formulaire Plateau</b></button>
     </div>   
-    
-    <form id="formMeuble" class="form-container">
+
+<div class="tout">
+    <form id="formPlacard" class="form-container">
         <h2>Placard</h2>
         <label for="typeInput">Type de bois :</label>
         <input type="text" id="typeInput" name="typeInput"><br><br>
-    
+        
         <label for="hauteurInput">Hauteur (mm) :</label>
         <input type="number" id="hauteurInput" name="hauteurInput"><br><br>
-    
+        
         <label for="largeurInput">Largeur (mm) :</label>
         <input type="number" id="largeurInput" name="largeurInput"><br><br>
-    
+        
         <label for="profondeurInput">Profondeur (mm) :</label>
         <input type="number" id="profondeurInput" name="profondeurInput"><br><br>
-    
+        
         <label for="nombreElementsInput">Nombre d'éléments :</label>
         <input type="number" id="nombreElementsInput" name="nombreElementsInput"><br><br>
-    
+        
         <label for="finitionExtInput">Finition extérieure :</label>
         <input type="text" id="finitionExtInput" name="finitionExtInput"><br><br>
-    
+        
         <label for="chantsInput">Chants :</label>
         <input type="text" id="chantsInput" name="chantsInput"><br><br>
-    
+        
         <label for="nbPortesInput">Nombre de portes :</label>
         <input type="number" id="nbPortesInput" name="nbPortesInput"><br><br>
-    
+        
         <label for="typePorteInput">Type de porte :</label>
         <select id="typePorteInput" name="typePorteInput">
             <option value="Battantes">Battantes</option>
             <option value="Relevables">Relevables</option>
             <option value="Abattantes en bois">Abattantes en bois</option>
         </select><br><br>
-    
+        
         <label for="boisPorteInput">Bois de la porte :</label>
         <input type="text" id="boisPorteInput" name="boisPorteInput"><br><br>
-    
+        
         <label for="ouvertureInput">Ouverture :</label>
         <select id="ouvertureInput" name="ouvertureInput">
             <option value="Prise de main">Prise de main</option>
             <option value="Système push lash">Système push lash</option>
             <option value="Poignées (non fournies)">Poignées (non fournies)</option>
         </select><br><br>
-    
+        
         <label for="charniereInput">Charnière :</label>
         <select id="charniereInput" name="charniereInput">
             <option value="En Applique">En Applique</option>
             <option value="Encastrée">Encastrée</option>
             <option value="Jumelée">Jumelée</option>
         </select><br><br>
-        
+            
         <h2> Aménagements</h2>
 
         <label for="etageresInput">Nombre d'étagères :</label>
         <input type="number" id="etageresInput" name="etageresInput"><br><br>
-    
+        
         <label for="tringlesInput">Nombre de tringles :</label>
         <input type="number" id="tringlesInput" name="tringlesInput"><br><br>
-    
+        
         <label for="tiroirsInput">Nombre de tiroirs :</label>
         <input type="number" id="tiroirsInput" name="tiroirsInput"><br><br>
-    
+        
         <label for="tablettesInput">Nombre de tablettes :</label>
         <input type="number" id="tablettesInput" name="tablettesInput"><br><br>
-    
-        <button type="button" onclick="remplirTexte()">Remplir le texte du meuble</button>
+        
+        <button type="button" onclick="remplirTexte()">Remplir le texte du placard</button>
     </form>
-    
-
-    <hr>
-
-    <div id="infoMeuble" class="info-container">
-        <!-- Placeholder pour le texte du meuble personnalisé -->
-        <div id="infoMeuble">
-            Fourniture et pose d'un meuble en bois intérieur .... <span id="type"></span>. Hauteur : .... <span id="hauteur"></span>mm, largeur : .... <span id="largeur"></span>mm, profondeur : ....<span id="profondeur"></span>mm.
-            <br>
+        
+    <div id="infoPlacard" class="info-container">
+            <!-- Placeholder pour le texte du meuble personnalisé -->
+        <div id="infoPlacard">
+            Fourniture et pose d'un meuble en bois intérieur .... <span id="type"></span>. Hauteur : .... <span id="hauteur"></span>mm, largeur : .... <span id="largeur"></span>mm, profondeur : ....<span id="profondeur"></span>mm.<br>
             Meuble divisé en .... <span id="nombreElements"></span> éléments.
             <br>
             Finition extérieure (joues et façades si existantes) en .... <span id="finitionExt"></span>. Bois mélaminé épaisseur 19mm avec chants <span id="chants"></span>.
             <br>
-            Aménagement du meuble par :
-            <br>
+            Aménagement du meuble par :<br>
             - <span id="etageres"></span>.... étagères réglables posées sur taquets chromés. <span id="etageres"></span><br>
             - <span id="tringles"></span>.... tringles chromées pour espace penderie. Supports fixés sur l'étagère supérieure.<br>
             - <span id="tiroirs"></span>.... tiroirs posés sur coulisses télescopiques Blum à ouverture tandem. Fermeture avec ralentissement.<br>
@@ -102,8 +98,7 @@
             Accès par :
             .... <span id="nbPortes"></span> portes .... <span id="typePorteInput"></span> en .... <span id="boisPorteInput"></span> .... <span id="boisPorte"></span>.<br>
             Ouverture avec .... <span id="ouverture"></span>.<br>
-            Charnières à ouverture 110° pour portes en .... <span id="charniereInput"></span>, fermeture à amortisseur.
-            <br>
+            Charnières à ouverture 110° pour portes en .... <span id="charniereInput"></span>, fermeture à amortisseur.<br>
         </div>
     </div>
 
@@ -111,7 +106,7 @@
     <form id="formHabillage" class="form-container">
         <h2>Habillage</h2>
         <label for="boisEnInput">Bois En :</label>
-        <input type="text" id="boisEnInput" name="boisEnInput"><br><br>
+        <input type="text" id="boisEnInput" name="boisEnInput"><br>
 
         <label for="aboutementsInput">Nombre d'aboutements :</label>
         <input type="number" id="aboutementsInput" name="aboutementsInput"><br><br>
@@ -199,6 +194,7 @@
         Fixation .... sur tasseaux noyés.<br>
         Finition du plateau .... vernis / laqué.<br>
     </div>
+
     
     <script src="./src/script.js"></script>
 </body>
