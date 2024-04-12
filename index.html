@@ -9,14 +9,14 @@
 <body>
     
     <div class="div-btn">
-        <button id="btnPlacard" type="button"><b>Formulaire Placard</b></button>
+        <button id="btnCaisson" type="button"><b>Formulaire Caisson</b></button>
         <button id="btnHabillage" type="button"><b>Formulaire Habillage</b></button>
         <button id="btnPlateau" type="button"><b>Formulaire Plateau</b></button>
     </div>   
 
 <div class="tout">
-    <form id="formPlacard" class="form-container">
-        <h2>Placard</h2>
+    <form id="formCaisson" class="form-container">
+        <h2>Caisson</h2>
         <label for="typeInput">Type de bois :</label>
         <input type="text" id="typeInput" name="typeInput"><br><br>
         
@@ -79,12 +79,12 @@
         <label for="tablettesInput">Nombre de tablettes :</label>
         <input type="number" id="tablettesInput" name="tablettesInput"><br><br>
         
-        <button type="button" onclick="remplirTexte()">Remplir le texte du placard</button>
+        <button type="button" onclick="remplirTexte()">Remplir le texte du caisson</button>
     </form>
         
-    <div id="infoPlacard" class="info-container">
+    <div id="infoCaisson" class="info-container">
             <!-- Placeholder pour le texte du meuble personnalisé -->
-        <div id="infoPlacard">
+        <div id="infoCaisson">
             Fourniture et pose d'un meuble en bois intérieur .... <span id="type"></span>. Hauteur : .... <span id="hauteur"></span>mm, largeur : .... <span id="largeur"></span>mm, profondeur : ....<span id="profondeur"></span>mm.<br>
             Meuble divisé en .... <span id="nombreElements"></span> éléments.
             <br>
@@ -101,6 +101,8 @@
             Charnières à ouverture 110° pour portes en .... <span id="charniereInput"></span>, fermeture à amortisseur.<br>
         </div>
     </div>
+
+
 
 
     <form id="formHabillage" class="form-container">
@@ -175,6 +177,12 @@
         <label for="tablettesPlatInput">Nombre de tablettes :</label>
         <input type="number" id="tablettesPlatInput" name="tablettesPlatInput"><br><br>
         
+        <div class="divAmenagement">
+            <label for="persoPlatInput">Personnalisation autre :</label>
+            <input type="text" id="persoPlatInput" name="persoPlatInput"><br><br>
+            
+        </div>
+
         </select><br>
     
         <button type="button" onclick="remplirPlateau()">Remplir le texte du plateau</button>

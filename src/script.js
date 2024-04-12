@@ -16,7 +16,7 @@ function remplirTexte() {
     const tiroirs = document.getElementById('tiroirsInput').value; // Nombre de tiroirs
     const tablettes = document.getElementById('tablettesInput').value; // Nombre de tablettes
 
-    const infoPlacard = document.getElementById('infoPlacard');
+    const infoCaisson = document.getElementById('infoCaisson');
 
     // Vérifiez si tous les champs requis sont remplis AJOUTER PORTE OU PORTES SELON CHIFFRE
     if (type && hauteur && largeur && profondeur && finitionExt && chants && typePorte && boisPorte && ouverture) {
@@ -57,7 +57,7 @@ function remplirTexte() {
 
 
     // Assigner le texte construit à l'élément infoPlacard
-    infoPlacard.innerHTML = infoText;
+    infoCaisson.innerHTML = infoText;
 
     } else {
         alert("Veuillez remplir tous les champs du formulaire.");
@@ -151,66 +151,66 @@ function remplirPlateau() {
 
 
 // Récupérer les éléments des formulaires
-const formPlacard = document.getElementById('formPlacard');
+const formCaisson = document.getElementById('formCaisson');
 const formHabillage = document.getElementById('formHabillage');
 const formPlateau = document.getElementById('formPlateau');
 
 // Fonctions pour afficher les formulaires
-function afficherFormPlacard() {
-    formPlacard.style.display = 'block';
+function afficherFormCaisson() {
+    formCaisson.style.display = 'block';
     formHabillage.style.display = 'none';
     formPlateau.style.display = 'none';
 }
 
 function afficherFormHabillage() {
-    formPlacard.style.display = 'none';
+    formCaisson.style.display = 'none';
     formHabillage.style.display = 'block';
     formPlateau.style.display = 'none';
 }
 
 function afficherFormPlateau() {
-    formPlacard.style.display = 'none';
+    formCaisson.style.display = 'none';
     formHabillage.style.display = 'none';
     formPlateau.style.display = 'block';
 }
 
 // Associer les fonctions aux boutons correspondants
-document.getElementById('btnPlacard').addEventListener('click', afficherFormPlacard);
+document.getElementById('btnCaisson').addEventListener('click', afficherFormCaisson);
 document.getElementById('btnHabillage').addEventListener('click', afficherFormHabillage);
 document.getElementById('btnPlateau').addEventListener('click', afficherFormPlateau);
 
 // Par défaut, afficher le formulaire "Meuble" au chargement de la page
-afficherFormPlacard();
+afficherFormCaisson();
 
 
 // Récupérer les éléments des divs d'informations
-const infoPlacard = document.getElementById('infoPlacard');
+const infoCaisson = document.getElementById('infoCaisson');
 const infoHabillage = document.getElementById('infoHabillage');
 const infoPlateau = document.getElementById('infoPlateau');
 
 // Fonctions pour afficher les informations
-function afficherInfoPlacard() {
-    infoPlacard.style.display = 'block';
+function afficherInfoCaisson() {
+    infoCaisson.style.display = 'block';
     infoHabillage.style.display = 'none';
     infoPlateau.style.display = 'none';
 }
 
 function afficherInfoHabillage() {
-    infoPlacard.style.display = 'none';
+    infoCaisson.style.display = 'none';
     infoHabillage.style.display = 'block';
     infoPlateau.style.display = 'none';
 }
 
 function afficherInfoPlateau() {
-    infoPlacard.style.display = 'none';
+    infoCaisson.style.display = 'none';
     infoHabillage.style.display = 'none';
     infoPlateau.style.display = 'block';
 }
 
 // Associer les fonctions aux boutons correspondants
-document.getElementById('btnPlacard').addEventListener('click', () => {
-    afficherFormPlacard();
-    afficherInfoPlacard(); // Afficher les informations correspondantes
+document.getElementById('btnCaisson').addEventListener('click', () => {
+    afficherFormCaisson();
+    afficherInfoCaisson(); // Afficher les informations correspondantes
 });
 
 document.getElementById('btnHabillage').addEventListener('click', () => {
@@ -224,6 +224,6 @@ document.getElementById('btnPlateau').addEventListener('click', () => {
 });
 
 // Par défaut, afficher le formulaire "Meuble" et ses informations au chargement de la page
-afficherFormPlacard();
-afficherInfoPlacard();
+afficherFormCaisson();
+afficherInfoCaisson();
 
