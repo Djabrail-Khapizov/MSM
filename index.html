@@ -16,7 +16,7 @@
 
 <div class="tout">
     <form id="formCaisson" class="form-container">
-        <h2>Caisson</h2>
+        <h2 id="h2Caisson">Caisson</h2>
         <label for="typeInput">Type de bois :</label>
         <input type="text" id="typeInput" name="typeInput"><br><br>
         
@@ -65,7 +65,7 @@
             <option value="Jumelée">Jumelée</option>
         </select><br><br>
             
-        <h2> Aménagements</h2>
+        <h2 id="h2Caisson"> Aménagements</h2>
 
         <label for="etageresInput">Nombre d'étagères :</label>
         <input type="number" id="etageresInput" name="etageresInput"><br><br>
@@ -153,7 +153,7 @@
         <label for="fixationPlatInput">Fixations tasseaux noyés :</label>
         <select id="fixationPlatInput" name="fixationPlatInput">
             <option value="visible">Oui</option>
-            <option value="invisible">Non</option>
+            <option value="non">Non</option>
         </select><br>
 
         <label for="finitionPlatInput">Finition du plateau :</label>
@@ -165,7 +165,7 @@
 
         <h2>Aménagements</h2>
 
-        <label for="etageresPlatInput">Nombre de tringles :</label>
+        <label for="etageresPlatInput">Nombre d'étagères :</label>
         <input type="number" id="etageresPlatInput" name="etageresPlatInput"><br><br>
     
         <label for="tringlesPlatInput">Nombre de tringles :</label>
@@ -190,15 +190,16 @@
 
     <div id="infoPlateau" class="info-container">
         Fourniture et pose d'un plateau en bois .... .<br>
-        Longueur : .... mm, profondeur : .... mm, épaisseur ....: mm, retour : ....mm. <br>
+        Longueur : .... mm, profondeur : .... mm, épaisseur : .... mm, retour : ....mm. <br>
         Aménagement par :<br>
-        - Meuble en partie basse en bois .... dimensions Hauteur : mm, largeur : mm, profondeur : mm.<br>
+        - Meuble en partie basse en bois .... dimensions Hauteur : .... mm, largeur : .... mm, profondeur : .... mm.<br>
         - .... étagères réglables posés sur taquets chromés.<br>
         - .... tringles chromées pour espace penderie. Supports fixés sur l'étagère supérieure.<br>
         - .... tiroirs posés sur coulisses télescopique Blum à ouverture tandem. Fermeture avec ralentissement.<br>
         - .... tablettes posées sur coulisses télescopique Blum à ouverture totale.<br>
         
-        Finition extérieure (joues et façades si existantes) en .... . Bois mélaminé épaisseur 19mm avec chants stratifiés plaqué en .... .<br>
+        Finition extérieure (joues et façades si existantes) en .... . 
+        Bois mélaminé épaisseur 19mm avec chants stratifiés plaqué en .... .<br>
         
         Fixation .... sur tasseaux noyés.<br>
         Finition du plateau .... vernis / laqué.<br>

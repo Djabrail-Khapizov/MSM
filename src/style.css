@@ -6,6 +6,11 @@
     display: flex;
 }
 
+h2Caisson {
+    margin-top: -12px;
+    margin-bottom: 10px;
+}
+
 .container {
     flex-basis: 45%; /* Largeur des conteneurs (45% de l'espace disponible) */
 }
@@ -13,11 +18,11 @@
 .info-container,
 .form-container {
     background-color: #fff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .form-container {
@@ -56,12 +61,12 @@ form input[type="text"],
 form input[type="number"],
 form select,
 form button {
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 5px; /* Réduire le padding interne des éléments */
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-
 }
+
 
 form button {
     background-color: #4CAF50;

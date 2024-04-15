@@ -19,7 +19,7 @@ function remplirTexte() {
     const infoCaisson = document.getElementById('infoCaisson');
 
     // Vérifiez si tous les champs requis sont remplis AJOUTER PORTE OU PORTES SELON CHIFFRE
-    if (type && hauteur && largeur && profondeur && finitionExt && chants && typePorte && boisPorte && ouverture) {
+    if (type && hauteur && largeur && profondeur && finitionExt && typePorte) {
         let infoText = `Fourniture et pose d'un meuble en bois intérieur <strong>${type}</strong>. Hauteur : <strong>${hauteur}</strong>mm, largeur : <strong>${largeur}</strong>mm, profondeur : <strong>${profondeur}</strong>mm.
         <br>`;
 
@@ -28,9 +28,14 @@ function remplirTexte() {
             <br>`;
         }
 
-        infoText += `Finition extérieure (joues et façades si existantes) en <strong>${finitionExt}</strong>. Bois mélaminé épaisseur 19mm avec chants <strong>${chants}</strong>.
-        <br>
-        Aménagement du meuble par :
+        infoText += `Finition extérieure (joues et façades si existantes) en <strong>${finitionExt}</strong>.`
+        
+        if (chants > 0) {
+            infoText += `Bois mélaminé épaisseur 19mm avec chants <strong>${chants}</strong>.
+            <br>`;
+        }
+       
+        infoText += `Aménagement du meuble par :
         <br>`;
 
         if (etageres > 0) {
@@ -60,7 +65,7 @@ function remplirTexte() {
     infoCaisson.innerHTML = infoText;
 
     } else {
-        alert("Veuillez remplir tous les champs du formulaire.");
+        alert("Veuillez remplir les champs obligatoire du formulaire.");
     }
 }
 
@@ -131,11 +136,12 @@ function remplirPlateau() {
             infoText += `- Finition extérieure (joues et façades si existantes) en <strong>${finition}</strong>.<br>`;
         }
 
-        infoText += `Bois mélaminé épaisseur 19mm avec chants stratifiés plaqué en <strong>${etageres}</strong>.<br>
+        /*infoText += `Bois mélaminé épaisseur 19mm avec chants stratifiés plaqué en <strong>${etageres}</strong>.<br>`*/
         
-        Fixation <strong>${fixation}</strong> sur tasseaux noyés.<br>`;
+        if (fixation !== 'non') {
+            infoText += `Fixation <strong>${fixation}</strong> sur tasseaux noyés.<br>`;
+        }
 
-        console.log(finition);
         if (finition !== 'aucune') {
             infoText += `- Finition du plateau <strong>${finition}</strong>.<br><br>`;
         }
